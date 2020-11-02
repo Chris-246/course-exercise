@@ -1,38 +1,120 @@
-.App {
+/* HEADER */
+
+.container {
+  height: 100vh;
+}
+.header {
+  height: 100px;
+  background-color: RGB(51, 51, 51);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.titleHeader {
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
   text-align: center;
+  line-height: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* MAIN */
+.main {
+  font-family: Georgia, "Times New Roman", Times, serif;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: 20px;
+  width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.mainJob {
+  height: 1020px;
+  width: 1020px;
+  margin: 60px 210px;
+  display: flex;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bluebox,
+.greenbox,
+.redbox,
+.yellowbox,
+.chairbox {
+  width: 300px;
+  height: 300px;
+  padding: 18px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bluebox {
+  border: blue solid 10px;
+}
+.greenbox {
+  border: green solid 10px;
+}
+
+.redbox {
+  border: red solid 10px;
+}
+
+.yellowbox {
+  border: yellow solid 10px;
+}
+
+.chairbox {
+  border: #f9c5b0 solid 10px;
+}
+
+.texteJob {
+  font-size: 10px;
+}
+
+/* FOOTER */
+.footer {
+  height: 63px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background-color: #dddddd;
+}
+
+.textFooter {
+  font-size: 16px;
+  text-align: center;
+  line-height: 63px;
+}
+
+.span {
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+  .mainJob {
+    flex: 1 0 90%;
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: space-evenly;
   }
-  to {
-    transform: rotate(360deg);
+
+  .bluebox,
+  .greenbox,
+  .redbox,
+  .yellowbox,
+  .chairbox {
+    /* width: calc(50% - 60px); */
+    margin: 0 30px;
+    margin-bottom: 60px;
+  }
+
+  .footer {
+    height: 63px;
+    width: 100%;
   }
 }
